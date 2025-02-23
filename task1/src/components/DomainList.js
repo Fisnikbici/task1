@@ -10,7 +10,7 @@ const DomainList = () => {
                 </div>
               <div className="Title-decription">
                 <div className="TITLE">
-                  <h1>{domain.title}</h1>
+                  <h2>{domain.title}</h2>
                 </div>
                 <div className="description">
                   <p>{domain.description}</p>

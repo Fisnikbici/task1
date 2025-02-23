@@ -1,88 +1,100 @@
-
 body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
-
 }
 
+.container{
 
-
-/* Stilizimi i përgjithshëm për container */
-.domain-list {
-  /* display: flex;
-  flex-direction: row; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+ max-width: 1200px;
  
+}
+
+/* Stilizimi bazë për container dhe kartat */
+.domain-list{
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  justify-content: center;
+  
 }
 
-/* Stilizimi i kartës së domeneve */
 .Card {
   display: flex;
   align-items: center;
+  width: calc(33.333% - 20px); /* 3 kolona në desktop */
+
 }
 
-/* Stilizimi i ikonave */
+/* Stilizimi për ikonat */
 .Icon {
-  margin-right: 15px;
-  font-size: 24px;
-  color: #007bff;
+  font-size: 32px;
+  color: #007bff; /* Ngjyrë blu për ikonat */
+  
+  border:solid 2px #007bff;
+
+  border-radius: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  
+
 }
 
-/* Stilizimi i titullit */
+/* Stilizimi për titullin dhe përshkrimin */
+.Title-description {
+  text-align: center;
+}
+
 .Title {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   color: #333;
+  margin-bottom: 10px;
 }
 
-/* Stilizimi i përshkrimit */
 .description {
   font-size: 14px;
   color: #666;
-  margin-top: 5px;
+  line-height: 1.5;
 }
 
-/* Stilizimi i titullit dhe përshkrimit */
-.Title-decription {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Për tablet (768px - 1024px) */
-@media (max-width: 1024px) {
-  .Card {
-      flex: 1 1 calc(50% - 40px); /* 2 kolona në tablet */
-  }
-}
-
-
-/* Për telefona (më pak se 768px) */
+/* Media queries për tablet */
 @media (max-width: 768px) {
-  .domain-list {
-      grid-template-columns: 1fr; /* Një kolonë në telefon */
-      gap: 10px;
-      padding: 10px;
-  }
-
   .Card {
-      padding: 10px;
+      width: calc(50% - 40px); /* 2 kolona në tablet */
   }
 
   .Icon {
-      font-size: 20px; /* Madhësi më e vogël e ikonave */
+      font-size: 28px;
   }
 
   .Title {
-      font-size: 16px; /* Madhësi më e vogël e fontit për titullin */
+      font-size: 16px;
   }
 
   .description {
-      font-size: 12px; /* Madhësi më e vogël e fontit për përshkrimin */
+      font-size: 13px;
+  }
+}
+
+/* Media queries për telefon */
+@media (max-width: 480px) {
+  .Card {
+      width: calc(100% - 40px); /* 1 kolonë në telefon */
+  }
+
+  .Icon {
+      font-size: 24px;
+  }
+
+  .Title {
+      font-size: 15px;
+  }
+
+  .description {
+      font-size: 12px;
   }
 }
