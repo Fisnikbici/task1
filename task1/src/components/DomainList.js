@@ -1,3 +1,4 @@
+
 import domains from "./navdata";
 
 const DomainList = () => {
@@ -5,18 +6,20 @@ const DomainList = () => {
       <div className="domain-list">
         {domains.map((domain, index) => (
           <div className="Card" key={index}>
-            <div className="Icon" >
-                {domain.icon} 
-                </div>
-              <div className="Title-decription">
-                <div className="TITLE">
-                  <h2>{domain.title}</h2>
-                </div>
-                <div className="description">
-                  <p>{domain.description}</p>
-                </div>
-              </div>
             
+            <div className="Icon-wrapper">
+              <div className="Icon">
+                {domain.icon} 
+              </div>
+            </div>
+            <div className="Title-description">
+              <div className="Title">
+                <h2>{domain.title}</h2>
+              </div>
+              <div className="description">
+                <p>{domain.description}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -24,3 +27,4 @@ const DomainList = () => {
 };
 
 export default DomainList;
+
