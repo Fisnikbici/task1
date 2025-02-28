@@ -76,7 +76,7 @@ body{
 /* Media queries për tablet */
 @media (max-width: 768px) {
   .Card {
-      width: calc(50% - 40px); /* 2 kolona në tablet */
+      width: calc(60% - 40px); /* 2 kolona në tablet */
   }
 
   .Icon {
